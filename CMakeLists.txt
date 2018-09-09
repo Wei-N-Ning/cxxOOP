@@ -7,6 +7,8 @@ include(tinyCUnit/tinyCUnit.cmake)
 
 add_subdirectory(classes)
 add_subdirectory(container)
+add_subdirectory(exceptions)
+add_subdirectory(fields)
 add_subdirectory(iterator)
 add_subdirectory(methods)
 

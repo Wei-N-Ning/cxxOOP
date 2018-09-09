@@ -17,3 +17,26 @@ add_test(
     COMMAND
     nested_and_local_classes
 )
+
+add_executable(diamond_inheritance diamond_inheritance.cpp)
+set_target_properties(diamond_inheritance
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "classes::diamond-inheritance"
+    COMMAND diamond_inheritance)
+
+add_executable(multi_inheritance multi_inheritance.cpp)
+set_target_properties(multi_inheritance
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "classes::multiple-inheritance"
+    COMMAND multi_inheritance)
+
+
+add_tinytest_executable(demo_geometry_polymorphism
+    demo_geometry_polymorphism.cpp)
+set_target_properties(demo_geometry_polymorphism
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "classes::geometry-polymorphism"
+    COMMAND demo_geometry_polymorphism)
