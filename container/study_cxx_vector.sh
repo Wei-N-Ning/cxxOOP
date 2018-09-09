@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # to study the instantiated STL vector class
+# use preprocessor technique to extract the source lines
+# this can be followed by a call to clang-format
 
 CXX=c++
 CXXARGS="-std=c++14"

@@ -40,7 +40,7 @@ set_target_properties(bitArrayTest
     PROPERTIES
     CXX_STANDARD 14)
 add_test(NAME
-    "bit-array::test "
+    "container::bit-array"
     COMMAND
     bitArrayTest)
 
@@ -49,6 +49,21 @@ set_target_properties(stdDequeTest
     PROPERTIES
     CXX_STANDARD 14)
 add_test(NAME
-    "std::deque::test-and-comparison"
+    "container::deque-test-and-comparison"
     COMMAND
     stdDequeTest)
+
+add_tinytest_executable(associative_containers
+    associative_containers.cpp)
+set_target_properties(associative_containers
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "container::associative-container-modification"
+    COMMAND associative_containers)
+
+add_executable(vector_as_carray vector_as_carray.cpp)
+set_target_properties(vector_as_carray
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "container::use-vector-as-c-array"
+    COMMAND vector_as_carray)

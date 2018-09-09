@@ -13,7 +13,7 @@ set_target_properties(nested_and_local_classes
     CXX_STANDATD 98)
 add_test(
     NAME
-    "class-design::nested-and-local-classes"
+    "classes::nested-and-local-classes"
     COMMAND
     nested_and_local_classes
 )

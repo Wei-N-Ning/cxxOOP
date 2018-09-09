@@ -2,6 +2,8 @@
 // Created by wein on 11/28/17.
 //
 
+// a basic example showing a vector of std::shared_ptr
+
 #include <cassert>
 #include <vector>
 

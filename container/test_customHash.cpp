@@ -4,6 +4,11 @@
 #include <string>
 #include <cassert>
 
+// see also
+// https://en.cppreference.com/w/cpp/utility/hash
+// custom specialization of std::hash can be injected in namespace std
+
+
 namespace recipes {
 
 class Node {

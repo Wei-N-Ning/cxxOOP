@@ -34,3 +34,11 @@ add_test(NAME "methods::explicit-boolean-conversion-sh"
     COMMAND
     ${BASH_PROGRAM} ${CMAKE_CURRENT_SOURCE_DIR}/explicitBoolConvTest.sh
     )
+
+add_executable(boolean_operator operator_bool.cpp)
+add_test(NAME "methods::boolean-operator"
+    COMMAND boolean_operator)
+
+add_executable(stream_operator operator_stream.cpp)
+add_test(NAME "methods::stream-operator"
+    COMMAND stream_operator)
