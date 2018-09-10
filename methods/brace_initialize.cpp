@@ -76,9 +76,11 @@ void verifyInitType() {
 
 void mostVexingParse() {
     // this declares a function
+    // note: on bsd this will throw most vexing warning
     // POD pp();
     // equivalent to:
     POD (* pp) () = nullptr;
+    pp = []() -> POD { return POD{}; };
 
     // calls default ctor
     POD ppp{};
