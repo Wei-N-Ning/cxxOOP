@@ -6,7 +6,7 @@ struct A {
     operator bool() {
         return value > 0;
     }
-    int value = 0;
+    int value;
 };
 
 A::A(int v)

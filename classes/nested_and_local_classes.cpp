@@ -23,14 +23,18 @@ void template_using_local_class() {
     class SUT {
     public:
         int operator() () {
+            ///////////// IMPORTANT //////////////
             // P200 the local class object does not have access to
             // the enclosing function's variables
             // return a + 1;
             return 0;
         }
     };
+    
 
-    std::vector<SUT> s;
+    ///////////// on bsd (Mac OS) this causes a warning /////////////
+    // not recommended
+    // std::vector<SUT> s;
 }
 
 int main() {

@@ -10,6 +10,7 @@ class ShapeInterface
 public:
     virtual const std::string name() const = 0;
     virtual unsigned short dimension() const = 0;
+    virtual ~ShapeInterface() = default;
 };
 
 class Point : public ShapeInterface

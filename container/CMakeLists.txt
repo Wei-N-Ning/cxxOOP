@@ -28,13 +28,6 @@ set_property(TARGET test_containerOfSmartPtrs
 add_test(NAME "container::vector-of-smartptrs"
     COMMAND test_containerOfSmartPtrs)
 
-add_executable(dequeStudy vector_vs_deque_pp.cpp)
-set_target_properties(dequeStudy
-    PROPERTIES
-    CXX_STANDARD 14)
-add_test(NAME "container::deque-study"
-    COMMAND dequeStudy)
-
 add_tinytest_executable(bitArrayTest bit_container_test.cpp)
 set_target_properties(bitArrayTest
     PROPERTIES
