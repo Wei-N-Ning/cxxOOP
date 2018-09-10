@@ -1,4 +1,4 @@
-//
+///
 // Created by wein on 5/27/18.
 //
 // source: EMC++ Item 7 P49
@@ -38,6 +38,7 @@ struct POD {
     POD &operator=(const POD &other) noexcept {
         m_value = other.m_value;
         m_type = InitType::CopyAsgn;
+        return *this;
     }
     int m_value;
     InitType m_type;
@@ -75,9 +76,9 @@ void verifyInitType() {
 
 void mostVexingParse() {
     // this declares a function
-    POD pp();
-    assert((! std::is_same<decltype(pp), POD>::value));
-    assert((std::is_same<decltype(pp), POD(void)>::value));
+    // POD pp();
+    // equivalent to:
+    POD (* pp) () = nullptr;
 
     // calls default ctor
     POD ppp{};
