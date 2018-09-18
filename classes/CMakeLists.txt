@@ -40,3 +40,11 @@ set_target_properties(demo_geometry_polymorphism
     CXX_STANDARD 14)
 add_test(NAME "classes::geometry-polymorphism"
     COMMAND demo_geometry_polymorphism)
+
+add_tinytest_executable(virtual_inheritance_member_variables
+    virtual_inheritance/member_variables.cpp)
+set_target_properties(virtual_inheritance_member_variables
+    PROPERTIES
+    CXX_STANDARD 14)
+add_test(NAME "classes::virtual-inheritance::member-variables"
+    COMMAND virtual_inheritance_member_variables)
