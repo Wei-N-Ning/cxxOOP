@@ -17,6 +17,14 @@ enum class ItemColor
 struct Item
 {
     static inline ItemColor color = ItemColor::Red;
+    // c++ 17 complete guide P/26
+    // constexpr implies inline
+    // ^^^^^^^^^^^^^^^^^^^^^^^^
+    // the above definition can be rewritten as:
+    // static constexpr ItemColor color = ItemColor::Red;
+    //        ^^^^^^^^^
+    // the "declaration" is the definition by itself, so the code is valid
+    // without the former definition
 };
 
 struct BlueItem : Item
